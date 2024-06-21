@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+    <div class="whole-page">
+        <div class="main-container">
+            <div class="header-container">
+                <button class="btn toggle-button" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <img src="images\icon-menu.svg" alt="menu" height="10px" />
+                </button>
+
+                <div class="offcanvas offcanvas-start w-50" tabindex="0" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasLeftLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="list-unstyled">
+                            <li><a class="nav-link" href="#">Collections</a></li>
+                            <li><a class="nav-link" href="#">Men</a></li>
+                            <li><a class="nav-link" href="#">Women</a></li>
+                            <li><a class="nav-link" href="#">About</a></li>
+                            <li><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img class="logo-im" style="height: 15px; width: 95px; cursor: pointer" src="images\logo.svg"
+                        alt="logo" />
+                </div>
+                <div class="navtools">
+                    <div class="col" style="
+                opacity: 0.6;
+                font-size: small;
+                margin-left: 50px;
+                cursor: pointer;
+                font-family: sans-serif;
+              ">
+                        Collections
+                    </div>
+                    <div class="menz" style="
+                opacity: 0.6;
+                font-size: small;
+                margin-left: 20px;
+                cursor: pointer;
+                font-family: sans-serif;
+              ">
+                        Men
+                    </div>
+                    <div class="womz" style="
+                opacity: 0.6;
+                font-size: small;
+                margin-left: 20px;
+                cursor: pointer;
+                font-family: sans-serif;
+              ">
+                        Women
+                    </div>
+                    <div class="abtz" style="
+                opacity: 0.6;
+                font-size: small;
+                margin-left: 20px;
+                cursor: pointer;
+                font-family: sans-serif;
+              ">
+                        About
+                    </div>
+                    <div class="cantz" style="
+                opacity: 0.6;
+                font-size: small;
+                margin-left: 20px;
+                cursor: pointer;
+                font-family: sans-serif;
+              ">
+                        Contact
+                    </div>
+                </div>
+                <div class="cart-container">
+                    <img class="cart-image" style="height: 15px; width: 15px; cursor: pointer"
+                        src="images\icon-cart.svg" alt="cart" />
+                    <!-- <span class="cart-notification">3</span> -->
+                    <div class="cart-hover-box1">
+                        <p style="font-size: 15px; margin-top: 10px">Cart</p>
+                        <hr />
+                        <div style="position: absolute; top: 50%; left: 25%">
+                            Your cart is empty.
+                        </div>
+                    </div>
+                    <!--<div class="cart-hover-box2">
+            <div class="cart-title">Cart</div>
+            <div class="cart-item">
+              <img src="images\image-product-1-thumbnail.jpg" alt="Product" class="product-image" />
+              <div class="product-details">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00 x 3 <span>$375.00</span></p>
+              </div>
+              <img class="del-img" src="images\icon-delete.svg" />
+            </div>
+            <button class="checkout-button">Checkout</button>
+          </div>-->
+                </div>
+                <div>
+                    <img style="
+                height: 50px;
+                width: 50px;
+                margin-left: 30px;
+                cursor: pointer;
+              " src="images\image-avatar.png" alt="avatar" />
+                </div>
+            </div>
+            <div class="base-container">
+                <div class="sub-container1">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img class="main-image" style="
+                  height: 300px;
+                  width: 350px;
+                  border-radius: 15px;
+                  margin-top: 20px;
+                  margin-left: 15px;
+                  cursor: pointer;
+                " src="images\image-product-1.jpg" />
+                    </button>
+                    <div style="position: absolute;" id="car">
+                        <div id="carouselExampleIndicators1" class="carousel slide  w-75" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images\image-product-1.jpg" class="d-block w-100" alt="img1" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-2.jpg" class="d-block  w-100" alt="img2" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-3.jpg" class="d-block w-100" alt="img3" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-4.jpg" class="d-block w-100" alt="img4" />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="images-thumb">
+                        <div>
+                            <img class="imagess" style="
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 8px;
+                    border: 2px solid hsl(26, 100%, 55%);
+                    opacity: 0.5;
+                    cursor: pointer;
+                    padding-left: 0px;
+                  " src="images\image-product-1-thumbnail.jpg" />
+                        </div>
+                        <div>
+                            <img class="imagess" style="
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                  " src="images\image-product-2-thumbnail.jpg" />
+                        </div>
+                        <div>
+                            <img class="imagess" style="
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                  " src="images\image-product-3-thumbnail.jpg" />
+                        </div>
+                        <div>
+                            <img class="imagess" style="
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                  " src="images\image-product-4-thumbnail.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-container2">
+                    <h5 style="
+                opacity: 0.7;
+                letter-spacing: 1px;
+                font-family: sans-serif;
+                font-weight: 400px;
+              ">
+                        SNEAKER COMPANY
+                    </h5>
+                    <h1 style="font-family: sans-serif">
+                        Fall Limited Edition <br />
+                        Sneakers
+                    </h1>
+                    <p class="paradiv2" style="
+                text-align: justify;
+                opacity: 0.5;
+                line-height: 28px;
+                font-size: 16px;
+                font-family: sans-serif;
+                font-weight: lighter;
+                word-spacing: 0px;
+                letter-spacing: 0px;
+              ">
+                        These Low-profile sneakers are your perferct casual wear
+                        compansion. Featuring a durable rubber outer soul,they'll
+                        withstand every thing the weather can offer
+                    </p>
+                    <h2 style="display: inline">$125.00</h2>
+                    <button style="
+                display: inline;
+                margin-left: 10px;
+                color: white;
+                background-color: black;
+                border-radius: 5px;
+                cursor: pointer;
+              ">
+                        50%
+                    </button>
+                    <p class="actualprice"><del>$250.00</del></p>
+                    <div class="adding" style="display: flex">
+                        <div class="single-adding" style="
+                  display: flex;
+                  margin-bottom: 15px;
+                  background-color: rgb(228, 238, 249);
+                  padding: 10px;
+                  padding-left: 20px;
+                  width: 150px;
+                ">
+                            <div class="minus" style="
+                    height: 35px;
+                    width: 40px;
+                    padding: 5px;
+                    border: none;
+                    margin-right: 0px;
+                    cursor: pointer;
+                  ">
+                                <img src="images\icon-minus.svg" alt="minus" />
+                            </div>
+                            <div class="value" style="
+                    height: 35px;
+                    width: 40px;
+                    padding: 5px;
+                    border: none;
+                    margin-left: 0px;
+                    cursor: pointer;
+                  ">
+                                0
+                            </div>
+                            <div class="plus" style="
+                    height: 35px;
+                    width: 40px;
+                    padding: 5px;
+                    border: none;
+                    cursor: pointer;
+                  ">
+                                <img src="images\icon-plus.svg" alt="plus" />
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button class="button-only" style="
+                    height: 35px;
+                    width: 200px;
+                    background-color: hsl(26, 100%, 55%);
+                    padding: 5px;
+                    border-radius: 10px;
+                    border-style: none;
+                    margin-left: 35px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    display: inline;
+                  ">
+                                <img style="
+                      height: 15px;
+                      width: 15px;
+                      margin-right: 10px;
+                      margin-top: 5px;
+                      margin-bottom: 15px;
+                    " src="images\icon-cart.svg" />Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+            <div class="modal-dialog w-100">
+                <div class="modal-content w-100 bg-light">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleIndicators2" class="carousel slide w-100" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images\image-product-1.jpg" class="d-block  w-100" alt="img1" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-2.jpg" class="d-block  w-100" alt="img2" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-3.jpg" class="d-block  w-100" alt="img3" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\image-product-4.jpg" class="d-block  w-100" alt="img4" />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div style="margin-top: 110px; position: absolute; left: 20px;">
+    <h2>A Project Done By:</h2>
+    <h5>UdhayKiran Kaitha</h5>
+    <h5>Full Stack Web Developer</h5>
+    <h5>Career Sure Academy</h5>
+    <h5>phone:6305465943</h5>
+    <h5>Mail:udhaykaitha575@gmail.com</h5>
+    <a href="www.linkedin.com/in/udhay-kaitha-aa4aa424a">LinkedIn</a>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMN26TZ5LwHujXAl6Kq2mW64coC5S8eoD1p6f5hYhASwANFPFlth/UvGdJJ/56NB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGczK3B1b6qaLg4lVB9sK6eM5tvnpZ2mrdk5H2yR0EId+62Y5LuoJlAtU0y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
